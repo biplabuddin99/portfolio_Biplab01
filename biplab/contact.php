@@ -1,13 +1,15 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+  if(isset($_POST['submit'])){
+   echo $name=$_POST['name'];
+   echo $email=$_POST['email'];
+   echo $phone=$_POST['phone'];
+   echo $subject=$_POST['subject'];
+   echo  $message=$_POST['message'];
+  }
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+?>
+<?php
+  $receiving_email_address = 'biplabuddin990@gmail.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
